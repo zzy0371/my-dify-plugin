@@ -1,0 +1,41 @@
+version: 0.0.1
+type: plugin
+author: zzy0371
+name: my-dify-plugin
+label:
+  en_US: my-dify-plugin
+  ja_JP: my-dify-plugin
+  zh_Hans: my-dify-plugin
+  pt_BR: my-dify-plugin
+description:
+  en_US: 496575233@qq.com
+  ja_JP: 496575233@qq.com
+  zh_Hans: 496575233@qq.com
+  pt_BR: 496575233@qq.com
+icon: icon.svg
+resource:
+  memory: 268435456
+  permission:
+    model:
+      enabled: true
+      llm: true
+      text_embedding: false
+      rerank: false
+      tts: false
+      speech2text: false
+      moderation: false
+plugins:
+  tools:
+    - provider/my-dify-plugin.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+created_at: 2025-06-06T09:55:17.4088115+08:00
+privacy: PRIVACY.md
+verified: false

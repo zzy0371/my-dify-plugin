@@ -1,0 +1,41 @@
+identity:
+  name: my-dify-plugin
+  author: zzy0371
+  label:
+    en_US: my-dify-plugin
+    zh_Hans: my-dify-plugin
+    pt_BR: my-dify-plugin
+description:
+  human:
+    en_US: 496575233@qq.com
+    zh_Hans: 496575233@qq.com
+    pt_BR: 496575233@qq.com
+  llm: 496575233@qq.com
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 用户语句
+      pt_BR: Query string
+    human_description:
+      en_US: 496575233@qq.com
+      zh_Hans: 496575233@qq.com
+      pt_BR: 496575233@qq.com
+    llm_description: 496575233@qq.com
+    form: llm
+  - name: chat_model
+    type: model-selector
+    scope: llm
+    label:
+      en_US: llm
+      zh_Hans: 大模型
+
+    human_description:
+      en_US: llm
+      zh_Hans: 大模型
+    form: form
+extra:
+  python:
+    source: tools/my-dify-plugin.py

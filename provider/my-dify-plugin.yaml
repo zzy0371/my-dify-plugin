@@ -1,0 +1,36 @@
+identity:
+  author: zzy0371
+  name: my-dify-plugin
+  label:
+    en_US: my-dify-plugin
+    zh_Hans: my-dify-plugin
+    pt_BR: my-dify-plugin
+  description:
+    en_US: 496575233@qq.com
+    zh_Hans: 496575233@qq.com
+    pt_BR: 496575233@qq.com
+  icon: icon.svg
+tools:
+  - tools/my-dify-plugin.yaml
+extra:
+  python:
+    source: provider/my-dify-plugin.py
+# ... (文件可能已有的 identity, name, label, description, icon 等保持不变) ...
+
+credentials_for_provider:
+    my_plugin_access_token: # 这是凭证的内部名称，将在 Python 代码中使用
+        type: secret-input # 输入类型为密码框
+        required: true # 此凭证是必需的
+        label: # 在 Dify UI 中显示的标签 (支持多语言)
+            en_US: My Plugin Access Token
+            zh_Hans: My Plugin 访问令牌
+            # ... (其他语言)
+        placeholder: # 输入框的提示文字 (支持多语言)
+            en_US: Enter your My Plugin access token
+            zh_Hans: 请输入您的 My Plugin 访问令牌
+            # ... (其他语言)
+        help: # 帮助提示信息 (支持多语言)
+            en_US: How to get your My Plugin access token
+            zh_Hans: 如何获取 My Plugin 访问令牌
+            # ... (其他语言)
+        url: https://github.com/zzy0371/my-dify-plugin # 点击帮助提示时跳转的 URL
