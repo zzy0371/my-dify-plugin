@@ -19,5 +19,5 @@ class MyDifyPluginTool(Tool):
 
 
         yield self.create_json_message({
-            "result": "Hello, world!"
+            "result": "Hello, world!!"
         })
